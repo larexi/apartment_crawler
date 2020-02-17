@@ -1,4 +1,4 @@
-# apartment_crawler
+# Rental apartment crawler
 
 This is a web crawler designed to fetch rental apartment ads from vuokraovi.com portal. In addition to this, it also uses HSL api's to fetch public transit travel times to defined addresses from the address of the apartments in the ads.
 

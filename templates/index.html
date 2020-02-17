@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rental apt crawler</title>
+</head>
+
+<body>
+  <h1 style="color: black">Rental apartment finder</h1>
+  <p>To start, please provide the following information:</p>
+
+  <form action="/results", method="post">
+      <label for="area">Area to look from:</label><br>
+      <input type="text" id="area" name="area" value="Helsinki"><br>
+
+      <label for="max_rent">Max rent in euros:</label><br>
+      <input type="text" id="max_rent" name="max_rent" value="1200"><br>
+
+      <label for="rooms">Number of rooms:</label><br>
+      <input type="range" id="rooms" name="rooms" min="1" max="5" value="1" oninput="this.form.amount.value=this.value"><br>
+      <output id="amount" name="amount" for="rooms">1</output>
+      <br><br>
+
+      <label for="travel">Find travel times to these addresses:</label><br>
+      <input type="text" id="travel" name="travel" value="Otakaari 1, Espoo"><br>
+      <label for="travel">Find travel times to these addresses:</label><br>
+      <input type="text" id="travel" name="travel" value="Kajaaninlinnantie 1, Helsinki"><br>
+
+      <input type="submit" value="Find me a place!">
+  </form>
+</body>
+
+</html>

@@ -19,8 +19,8 @@ def get_ads():
     area = request.form.get('area')
 
     travel_targets = request.form.getlist('travel')
-    for address in travel_targets:
-        crawler.commuting_calculator.add_address(address)
+    # for address in travel_targets:
+    #     crawler.commuting_calculator.add_address(address)
 
     crawler.set_criteria({
         'max_rent': max_rent,
@@ -30,3 +30,6 @@ def get_ads():
 
     values = crawler.crawl_vuokraovi()
     return '<hmtl><div><pre>' + json.dumps(values, indent=2) + '</pre></div></html>'
+
+if __name__ =="__main__":  
+    app.run(debug = True)  
